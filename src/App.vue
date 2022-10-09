@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <store-resource :storedResources='storedResources'></store-resource>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import StoreResource from './components/learning-resources/StoreResource.vue'
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    StoreResource,
+  },
+  data() {
+    return {
+      storedResources: [
+        {
+          id: "official_gide",
+          title: "Official Gide",
+          description: "this is the official vue decumantaion",
+          link: "http://vuejs.org",
+        },
+        {
+          id: "google",
+          title: "Google",
+          description: "Learn to google...",
+          link: "http://google.org",
+        },
+      ],
+    };
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
