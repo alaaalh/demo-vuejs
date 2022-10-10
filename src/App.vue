@@ -1,12 +1,18 @@
 <template>
-  <store-resource :storedResources='storedResources'></store-resource>
+  <!-- <store-resource :storedResources='storedResources'></store-resource>
+  <details-forms></details-forms> -->
+  <student-menu></student-menu>
 </template>
 
 <script>
-import StoreResource from './components/learning-resources/StoreResource.vue'
+// import StoreResource from './components/learning-resources/StoreResource.vue'
+// import DetailsForms from './components/Forms/details-forms.vue'
+import StudentMenu from './components/StudentMenu/student-menu.vue'
 export default {
   components: {
-    StoreResource,
+    // StoreResource,
+    // DetailsForms,
+    StudentMenu
   },
   data() {
     return {
